@@ -42,7 +42,7 @@
 
 <script>
 import { baseUrl } from "@/utils/baseUrl.js";
-import { loginFun, mandateTel, assignRoles } from "@/api/storeApis.js";
+import { loginFun, mandateTel } from "@/api/storeApis.js";
 // modal弹框组件
 import modalTips from "@/components/modalTips/modalTips.vue";
 export default {
@@ -73,7 +73,7 @@ export default {
     // 授权手机号
     onGetPhoneNumber(eve) {
       wx.login({
-        success: (res) => {
+        success: () => {
           mandateTel({
             code: eve.detail.code,
             token: "Bearer" + " " + this.loginData.tokenConfig.token,
@@ -130,7 +130,6 @@ export default {
       _this.$store.dispatch("setUserInfo", this.loginData.user);
       setTimeout(() => {
         /* 根据手机号判断角色 */
-        assignRoles();
         uni.switchTab({
           url: "/pages/store/index/index",
           success: function (e) {

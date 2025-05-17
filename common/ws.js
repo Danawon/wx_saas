@@ -7,7 +7,7 @@ let socketTask = null; // websocket对象
 let againTimer = null; //断线重连定时器
 
 
-let url = "wss://api.hansifit.com:8081";
+let url = "wss://devsaas.hansifit.com/JbvZhE";
 let onReFn = null;
 let onSucFn = null;
 let onErrFn = null;
@@ -37,7 +37,7 @@ const socket = (onErrorEvent, onErrorSucceed, onMessageFun) => {
 	socketTask = uni.connectSocket({
 		url: url,
 		header: {
-			'Authori-zation': uni.getStorageSync("token") ? 'Bearer'+ ' ' +uni.getStorageSync("token") : ''
+			'Authorization': uni.getStorageSync("token") ? 'Bearer'+ ' ' +uni.getStorageSync("token") : ''
 		},
 		success(data) {
 			/* 链接成功 */
@@ -59,11 +59,12 @@ const socket = (onErrorEvent, onErrorSucceed, onMessageFun) => {
 		// }, 1000 * 5)
 		heartbeatInterval = setInterval(() => {
 			sendMsg(JSON.stringify({
-				'type': 'ping',
-				'deviceId': uni.getStorageSync('deviceId') || '',
-				'data': null
+				'event': 'ping',
+				'sign': uni.getStorageSync('deviceId') || '',
+				'data': {}
 			}))
 		}, 1000)
+	
 		/* 链接成功 */
 		onErrorSucceed()
 		/* 监听收到回调 */

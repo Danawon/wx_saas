@@ -1,5 +1,5 @@
 {
-    "name" : "瀚斯运动",
+    "name" : "瀚思运动",
     "appid" : "__UNI__0BC11F0",
     "description" : "",
     "versionName" : "1.0.0",
@@ -52,7 +52,7 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "wxa5c98a4c5d84de12",
+        "appid" : "wx4c7d08ddf949172c",
         "libVersion" : "latest",
         "setting" : {
             "urlCheck" : true,

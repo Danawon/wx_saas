@@ -134,8 +134,8 @@
                 {{
                   bluetooth
                     ? equipmentObj.heartrate
-                    : tcpData.heart_rate
-                    ? tcpData.heart_rate
+                    : tcpData.heartRate
+                    ? tcpData.heartRate
                     : 0
                 }}
               </text>
@@ -158,7 +158,7 @@
                   </text>
                   <!-- 阻力等级 -->
                   <text v-if="currentTabs == 2">
-                    {{ tcpData.resistance_class || 0 }}
+                    {{ tcpData.resistanceClass || 0 }}
                   </text>
                 </view>
                 <view class="unit" v-if="currentTabs == 1"> 米 </view>
@@ -707,7 +707,6 @@ export default {
       fourStageShow: false,
       fourStageTxt: ``,
       testOverStatus: false,
-      strengthArr: [],
       bloodPressureTestCompleted: false, // 血压测试是否完成
     };
   },
@@ -760,7 +759,6 @@ export default {
             }
           }
         }
-        // if(this.testOverStatus && newV.heartrate < this.strengthArr[0].front) {
         if (
           this.testOverStatus &&
           newV.heartrate < Number(uni.getStorageSync("rhr")) * 1.1
@@ -998,7 +996,7 @@ export default {
       this.tcpData.cadence = 0;
       this.tcpData.power = 0;
       /* 重置功率车阻力监测 */
-      this.tcpData.resistance_class = 0;
+      this.tcpData.resistanceClass = 0;
       /* 重置倒计时定时器 */
       clearInterval(this.timer);
       /* 倒计时清0 */
@@ -1373,7 +1371,6 @@ export default {
     getHeart_rate_zones() {
       let keyArr = ["热身", "一", "二", "三", "四"];
       heart_rate_zones().then(({ data }) => {
-        this.strengthArr = data;
         data.map((item, index) => {
           this.testList2[index]["minHeart"] = item.front;
           this.testList2[index]["maxHeart"] = item.after;
@@ -1666,7 +1663,7 @@ export default {
       // tcp 返回数据
       // this.tcpData = JSON.parse(decodeURIComponent(escape(String.fromCharCode(...uint8_msg))));
       let tcpDData = JSON.parse(eve);
-      if (tcpDData.type == "heart_lung") {
+      if (tcpDData.event == "heartLung") {
         this.tcpData = tcpDData;
       }
       // if(this.tcpData.client_id) {

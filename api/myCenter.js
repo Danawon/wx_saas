@@ -297,7 +297,7 @@ export const getMaxOxygenUptake = data => {
 // 椭圆机加入分组 跑步机
 export const ellipticalsIndex = data => {
 	return req({
-		url: "ellipticals_index",
+		url: "device/connect",
 		method: "POST",
 		data
 	})

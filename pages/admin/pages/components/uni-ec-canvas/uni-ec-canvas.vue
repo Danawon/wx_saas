@@ -84,7 +84,7 @@
         return 0;
       },
       init(callback) {
-        const version = wx.getSystemInfoSync().SDKVersion;
+        const version = wx.getAppBaseInfo().SDKVersion;
 
         let canUseNewCanvas = this.compareVersion(version, "2.9.0") >= 0;
         if (this.forceUseOldCanvas) {
@@ -151,7 +151,7 @@
           .exec(res => {
             const canvasNode = res[0].node;
 
-            const canvasDpr = wx.getSystemInfoSync().pixelRatio;
+            const canvasDpr = wx.getWindowInfo().pixelRatio;
             const canvasWidth = res[0].width;
             const canvasHeight = res[0].height;
 
