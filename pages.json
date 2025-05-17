@@ -1,0 +1,1639 @@
+{
+  "pages": [
+    //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/store/index/index",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": true,
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/shop/index/index",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/myCenter/index/index",
+      "style": {
+        "navigationBarTitleText": "个人中心",
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/punchTheClock/index/index",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/livingAtHomeTraining/index/index",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/admin/index/index",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/login/login",
+      "style": {
+        "navigationBarTitleText": "登录",
+        "enablePullDownRefresh": false,
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "uni_modules/q-sign/pages/q-sign",
+      "style": {
+        "navigationBarTitleText": "签名"
+      }
+    },
+    {
+      "path": "pages/home/homepage",
+      "style": {
+        "navigationBarTitleText": "homepage"
+      }
+    }
+  ],
+  "subPackages": [
+    {
+      "root": "pages/livingAtHomeTraining/pages",
+      "pages": [
+        {
+          "path": "index/index",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "editCardShop/editCardShop",
+          "style": {
+            "navigationBarTitleText": "编辑会员卡门店",
+            "enablePullDownRefresh": false,
+            "navigationBarBackgroundColor": "#fff"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pages/doctor",
+      "pages": [
+        {
+          "path": "index/index",
+          "style": {
+            "navigationBarTitleText": "医生首页",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "editDocterInfo/editDocterInfo",
+          "style": {
+            "navigationBarTitleText": "编辑医生信息",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "doctorSignature/doctorSignature",
+          "style": {
+            "navigationBarTitleText": "医生签名",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "patientList/patientList",
+          "style": {
+            "navigationBarTitleText": "患者列表",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "exercisePrescription/exercisePrescription",
+          "style": {
+            "navigationBarTitleText": "运动处方",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "recipeAdmin/recipeAdmin",
+          "style": {
+            "navigationBarTitleText": "处方管理",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "doctorList/doctorList",
+          "style": {
+            "navigationBarTitleText": "医生列表",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pages/myCenter/pages",
+      "pages": [
+        {
+          "path": "myInfo/myInfo",
+          "style": {
+            "navigationBarTitleText": "个人信息",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "certification/certification",
+          "style": {
+            "navigationBarTitleText": "实名认证",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "coupons/coupons",
+          "style": {
+            "navigationBarTitleText": "优惠劵",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "vipCard/vipCard",
+          "style": {
+            "navigationBarTitleText": "会员卡",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "appointmentRecord/appointmentRecord",
+          "style": {
+            "navigationBarTitleText": "约课记录",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "appointmentDetails/appointmentDetails",
+          "style": {
+            "navigationBarTitleText": "约课详情",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "actionLibrary/actionLibrary",
+          "style": {
+            "navigationBarTitleText": "动作库",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "actiosDetails/actiosDetails",
+          "style": {
+            "navigationBarTitleText": "动作详情",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "issueLibrary/issueLibrary",
+          "style": {
+            "navigationBarTitleText": "知识库",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "actionLibraryDetail/actionLibraryDetail",
+          "style": {
+            "navigationBarTitleText": "知识库详情",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "tradingRecord/tradingRecord",
+          "style": {
+            "navigationBarTitleText": "交易记录",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "integrateShop/integrateShop",
+          "style": {
+            "navigationBarTitleText": "积分商场",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "integrateGoodsDetail/integrateGoodsDetail",
+          "style": {
+            "navigationBarTitleText": "积分商品详情",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "integralDetail/integralDetail",
+          "style": {
+            "navigationBarTitleText": "积分明细",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "mallOrder/mallOrder",
+          "style": {
+            "navigationBarTitleText": "商城订单",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "orderDetail/orderDetail",
+          "style": {
+            "navigationBarTitleText": "订单详情",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "myFacility/myFacility",
+          "style": {
+            "navigationBarTitleText": "我的设备",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "heartRateFacility/heartRateFacility",
+          "style": {
+            "navigationBarTitleText": "心率设备",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "healthData/healthData",
+          "style": {
+            "navigationBarTitleText": "健康数据",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "setInvisible/setInvisible",
+          "style": {
+            "navigationBarTitleText": "设置不可见人员",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "historyInfo/historyInfo",
+          "style": {
+            "navigationBarTitleText": "历史信息",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "checkReport/checkReport",
+          "style": {
+            "navigationBarTitleText": "健康数据结果",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "bluetoothTest/bluetoothTest",
+          "style": {
+            "navigationBarTitleText": "测试",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "pay/pay",
+          "style": {
+            "navigationBarTitleText": "充值",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "storeLocker/storeLocker",
+          "style": {
+            "navigationBarTitleText": "储物柜",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "lockerList/lockerList",
+          "style": {
+            "navigationBarTitleText": "储物柜列表",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "lockerList/leaseLocker",
+          "style": {
+            "navigationBarTitleText": "储物柜管理",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "LeaseRecord/LeaseRecord",
+          "style": {
+            "navigationBarTitleText": "租赁记录",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "trainingPlan/trainingPlan",
+          "style": {
+            "navigationBarTitleText": "训练计划",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "trainingDetail/trainingDetail",
+          "style": {
+            "navigationBarTitleText": "训练详情",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "trainingReport/trainingReport",
+          "style": {
+            "navigationBarTitleText": "训练报告",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "trainingDetailEquipment/trainingDetailEquipment",
+          "style": {
+            "navigationBarTitleText": "训练详情设备",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "videoExplain/videoExplain",
+          "style": {
+            "navigationBarTitleText": "视频讲解",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "healthQuestionnaire/healthQuestionnaire",
+          "style": {
+            "navigationBarTitleText": "翰思运动健康问卷",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "serviceDetail/serviceDetail",
+          "style": {
+            "navigationBarTitleText": "客服详情",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "trainingReportFilter/trainingReportFilter",
+          "style": {
+            "navigationBarTitleText": "训练报告筛选",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "testRecord/testRecord",
+          "style": {
+            "navigationBarTitleText": "测试记录",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "fatBurning/fatBurning",
+          "style": {
+            "navigationBarTitleText": "燃烧卡路里",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "calculator/calculator",
+          "style": {
+            "navigationBarTitleText": "减脂计算器",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "Invitation/Invitation",
+          "style": {
+            "navigationBarTitleText": "邀请有礼",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pages/punchTheClock/pages",
+      "pages": [
+        {
+          "path": "myBuyCard/myBuyCard",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "buyCard/buyCard",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "courseTask/courseTask",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "courseDetails/courseDetails",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "clockInTraining/clockInTraining",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "punchCardResult/punchCardResult",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "dietCourseDetail/dietCourseDetail",
+          "style": {
+            "navigationBarTitleText": "课程详情(饮食)",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "nutritionClockin/nutritionClockin",
+          "style": {
+            "navigationBarTitleText": "营养打卡",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "nutritionResults/nutritionResults",
+          "style": {
+            "navigationBarTitleText": "营养结果分析",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pages/shop/pages",
+      "pages": [
+        {
+          "path": "commodityDetail/commodityDetail",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "submitOrder/submitOrder",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "addressManage/addressManage",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "addressList/addressList",
+          "style": {
+            "navigationBarTitleText": "地址列表",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pages/store/pages",
+      "pages": [
+        {
+          "path": "searchShop/searchShop",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "storeDetail/storeDetail",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "buyCourseDetail/buyCourseDetail",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "buyCardAgreement/buyCardAgreement",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "paySuccess/paySuccess",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "coachDetail/coachDetail",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "serviceMessage/serviceMessage",
+          "style": {
+            "navigationBarTitleText": "客服页面",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "faceRecording/faceRecording",
+          "style": {
+            "navigationBarTitleText": "人脸录入",
+            "enablePullDownRefresh": false,
+            "navigationBarBackgroundColor": "#fff"
+          }
+        }
+      ]
+    },
+    {
+      "root": "pages/admin/pages",
+      "pages": [
+        {
+          "path": "dietitianApply/dietitianApply",
+          "style": {
+            "navigationBarTitleText": "营养师申请",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "sportsTeacher/sportsTeacher",
+          "style": {
+            "navigationBarTitleText": "运动管理师申请",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "coachApply/coachApply",
+          "style": {
+            "navigationBarTitleText": "教练申请",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "superAdmin/superAdmin",
+          "style": {
+            "navigationBarTitleText": "超级管理员",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "sportsCommissioner/sportsCommissioner",
+          "style": {
+            "navigationBarTitleText": "运营专员管理",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "addOperation/addOperation",
+          "style": {
+            "navigationBarTitleText": "添加运营专员",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "areaManager/areaManager",
+          "style": {
+            "navigationBarTitleText": "分区经理管理",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "addAreaManager/addAreaManager",
+          "style": {
+            "navigationBarTitleText": "添加分区经理",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "searchUser/searchUser",
+          "style": {
+            "navigationBarTitleText": "搜索用户",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "userDetail/userDetail",
+          "style": {
+            "navigationBarTitleText": "用户详情",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "issueCoupons/issueCoupons",
+          "style": {
+            "navigationBarTitleText": "发放优惠卷",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "selectUser/selectUser",
+          "style": {
+            "navigationBarTitleText": "选择用户",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "couponRecord/couponRecord",
+          "style": {
+            "navigationBarTitleText": "优惠卷记录",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "regionalManager/regionalManager",
+          "style": {
+            "navigationBarTitleText": "区域经理",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "manager/manager",
+          "style": {
+            "navigationBarTitleText": "店长",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "alterUser/alterUser",
+          "style": {
+            "navigationBarTitleText": "修改资料",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "shopDetail/shopDetail",
+          "style": {
+            "navigationBarTitleText": "店铺详情",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "storeManager/storeManager",
+          "style": {
+            "navigationBarTitleText": "门店教练审核",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "salesManager/salesManager",
+          "style": {
+            "navigationBarTitleText": "销售顾问审核",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        // },
+        {
+          "path": "searchFilter/searchFilter",
+          "style": {
+            "navigationBarTitleText": "用户查询",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "regionalManagerOperation/regionalManagerOperation",
+          "style": {
+            "navigationBarTitleText": "区域经理操作页",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "bodyDataComparison/bodyDataComparison",
+          "style": {
+            "navigationBarTitleText": "客户健康数据对比",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "selectUserHealth/selectUserHealth",
+          "style": {
+            "navigationBarTitleText": "查看用户健康数据",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "fitnessData/fitnessData",
+          "style": {
+            "navigationBarTitleText": "健康数据",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "financeList/financeList",
+          "style": {
+            "navigationBarTitleText": "分区财务管理列表",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "addFinance/addFinance",
+          "style": {
+            "navigationBarTitleText": "新增分区财务",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "productAudit/productAudit",
+          "style": {
+            "navigationBarTitleText": "产品审批",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        // ],
+        {
+          "path": "coachSales/coachSales",
+          "style": {
+            "navigationBarTitleText": "会员卡消课记录",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "incomeRecord/incomeRecord",
+          "style": {
+            "navigationBarTitleText": "门店收入",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "adoutClass/adoutClass",
+          "style": {
+            "navigationBarTitleText": "约课记录",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "productDetail/productDetail",
+          "style": {
+            "navigationBarTitleText": "产品详情管理",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "areaInvestor/areaInvestor",
+          "style": {
+            "navigationBarTitleText": "区域投资人",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "adoutClassDetail/adoutClassDetail",
+          "style": {
+            "navigationBarTitleText": "约课详情",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "groupClass/groupClass",
+          "style": {
+            "navigationBarTitleText": "团课成员",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "releaseMember/releaseMember",
+          "style": {
+            "navigationBarTitleText": "发布会员卡",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "vipInfo/vipInfo",
+          "style": {
+            "navigationBarTitleText": "会员卡查询",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "resultsDeclare/resultsDeclare",
+          "style": {
+            "navigationBarTitleText": "业绩申报",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "vipManagement/vipManagement",
+          "style": {
+            "navigationBarTitleText": "会员卡管理",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "groupClassTpl/groupClassTpl",
+          "style": {
+            "navigationBarTitleText": "团课模板",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "groupClassTplAdd/groupClassTplAdd",
+          "style": {
+            "navigationBarTitleText": "发布模板",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "storeManagerInfo/storeManagerInfo",
+          "style": {
+            "navigationBarTitleText": "门店教练资料设置",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "storeManagerInfoSet/storeManagerInfoSet",
+          "style": {
+            "navigationBarTitleText": "教练信息设置",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "selfStudy/selfStudy",
+          "style": {
+            "navigationBarTitleText": "自习课管理",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "storageArk/storageArk",
+          "style": {
+            "navigationBarTitleText": "储物柜管理",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "storageArkSet/storageArkSet",
+          "style": {
+            "navigationBarTitleText": "储物柜管理",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "holidayAdd/holidayAdd",
+          "style": {
+            "navigationBarTitleText": "节假日管理",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "lightControl/lightControl",
+          "style": {
+            "navigationBarTitleText": "智能灯光控制",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "lightControlEdit/lightControlEdit",
+          "style": {
+            "navigationBarTitleText": "添加灯光控制",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "entranceGuard/entranceGuard",
+          "style": {
+            "navigationBarTitleText": "智能门禁控制",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "entranceGuardAdd/entranceGuardAdd",
+          "style": {
+            "navigationBarTitleText": "添加门禁控制",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "vipClassRecord/vipClassRecord",
+          "style": {
+            "navigationBarTitleText": "会员卡消课记录",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "classRecordDetail/classRecordDetail",
+          "style": {
+            "navigationBarTitleText": "消课记录",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "salesStatistics/salesStatistics",
+          "style": {
+            "navigationBarTitleText": "教练月销售统计",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "trainingPlan/trainingPlan",
+          "style": {
+            "navigationBarTitleText": "训练计划模板",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "trainingPlanTpl/trainingPlanTpl",
+          "style": {
+            "navigationBarTitleText": "训练计划模板",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "planTemplate/planTemplate",
+          "style": {
+            "navigationBarTitleText": "计划模板",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "planNode/planNode",
+          "style": {
+            "navigationBarTitleText": "计划模板",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "coach/index/index",
+          "style": {
+            "navigationBarTitleText": "教练首页",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "coach/coachInfo/coachInfo",
+          "style": {
+            "navigationBarTitleText": "修改资料",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "coach/releaseDynamic/releaseDynamic",
+          "style": {
+            "navigationBarTitleText": "发布动态",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "coach/label/label",
+          "style": {
+            "navigationBarTitleText": "标签",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "coach/studentCase/studentCase",
+          "style": {
+            "navigationBarTitleText": "学员案例",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "coach/periodTime/periodTime",
+          "style": {
+            "navigationBarTitleText": "私教时段发布",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "coach/groupClass/groupClass",
+          "style": {
+            "navigationBarTitleText": "团课管理",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "coach/release/release",
+          "style": {
+            "navigationBarTitleText": "发布团课",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "coach/searchUser/searchUser",
+          "style": {
+            "navigationBarTitleText": "用户查询",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "coach/classOrder/classOrder",
+          "style": {
+            "navigationBarTitleText": "约课订单管理",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "coach/classDetail/classDetail",
+          "style": {
+            "navigationBarTitleText": "约课详情",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "coach/trainingPlan/trainingPlan",
+          "style": {
+            "navigationBarTitleText": "训练计划模板",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "coach/trainingPlanEdit/trainingPlanEdit",
+          "style": {
+            "navigationBarTitleText": "计划模板",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "coach/tplLibrary/tplLibrary",
+          "style": {
+            "navigationBarTitleText": "课程内容模板列表",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "sportsTeacherUser/sportsTeacherUser",
+          "style": {
+            "navigationBarTitleText": "运动管理师",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "sportsTeacherUser/info/info",
+          "style": {
+            "navigationBarTitleText": "修改资料",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "sportsTeacherUser/withdrawal/withdrawal",
+          "style": {
+            "navigationBarTitleText": "申请提现",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "sportsTeacherUser/income/income",
+          "style": {
+            "navigationBarTitleText": "我的收入",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "sportsTeacherUser/classOrder/classOrder",
+          "style": {
+            "navigationBarTitleText": "学员约课管理",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "sportsTeacherUser/courseManagement/courseManagement",
+          "style": {
+            "navigationBarTitleText": "课程管理",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "sportsTeacherUser/taskList/taskList",
+          "style": {
+            "navigationBarTitleText": "任务列表",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "sportsTeacherUser/vipClock/vipClock",
+          "style": {
+            "navigationBarTitleText": "会员打卡数据",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "sportsTeacherUser/heartRate/heartRate",
+          "style": {
+            "navigationBarTitleText": "训练强度",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "sportsTeacherUser/releaseTask/releaseTask",
+          "style": {
+            "navigationBarTitleText": "发布任务",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "customer_service/index/index",
+          "style": {
+            "navigationBarTitleText": "客服",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "customer_service/info/info",
+          "style": {
+            "navigationBarTitleText": "客服信息修改",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "dietitian/index/index",
+          "style": {
+            "navigationBarTitleText": "营养师",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "dietitian/vipClock/vipClock",
+          "style": {
+            "navigationBarTitleText": "会员打卡数据",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "dietitian/courseManagement/courseManagement",
+          "style": {
+            "navigationBarTitleText": "课程管理",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "dietitian/taskList/taskList",
+          "style": {
+            "navigationBarTitleText": "任务列表",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "dietitian/info/info",
+          "style": {
+            "navigationBarTitleText": "修改资料",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        // {
+        // 	"path": "dietitian/releaseTask/releaseTask",
+        // 	"style": {
+        // 		"navigationBarTitleText": "发布任务",
+        // 		"enablePullDownRefresh": false,
+        // 		"navigationStyle": "custom"
+        // 	}
+        // },
+        {
+          "path": "dietitian/releaseTaskList/releaseTaskList",
+          "style": {
+            "navigationBarTitleText": "发布任务",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "Sales/index/index",
+          "style": {
+            "navigationBarTitleText": "销售顾问",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "Sales/info/info",
+          "style": {
+            "navigationBarTitleText": "修改信息",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "Sales/shop/shop",
+          "style": {
+            "navigationBarTitleText": "店铺申请",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "Sales/results/results",
+          "style": {
+            "navigationBarTitleText": "销售业绩",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "Sales/detail/detail",
+          "style": {
+            "navigationBarTitleText": "销售业绩",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "courseOutline/courseOutline",
+          "style": {
+            "navigationBarTitleText": "课程内容大纲列表",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "sportsTeacherUser/withdrawRecord/withdrawRecord",
+          "style": {
+            "navigationBarTitleText": "提现申请记录",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "finance/finance",
+          "style": {
+            "navigationBarTitleText": "区域财务",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "finance/courseIncome/courseIncome",
+          "style": {
+            "navigationBarTitleText": "课程收入统计",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "finance/statisticsAnalyse/statisticsAnalyse",
+          "style": {
+            "navigationBarTitleText": "统计分析报表",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "addLamplight/addLamplight",
+          "style": {
+            "navigationBarTitleText": "新增灯光",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "lockerDeviceList/lockerDeviceList",
+          "style": {
+            "navigationBarTitleText": "储物柜设备列表",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "addLocker/addLocker",
+          "style": {
+            "navigationBarTitleText": "新增储物柜设备",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "editLocker/editLocker",
+          "style": {
+            "navigationBarTitleText": "编辑储物柜设备信息",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "addHolidaysChild/addHolidaysChild",
+          "style": {
+            "navigationBarTitleText": "新增节假日",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "cardiopulmonaryDataCollection/cardiopulmonaryDataCollection",
+          "style": {
+            "navigationBarTitleText": "心电仪数据采集",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "heartRateDetection/heartRateDetection",
+          "style": {
+            "navigationBarTitleText": "心率检测",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "editCoachAuth/editCoachAuth",
+          "style": {
+            "navigationBarTitleText": "编辑教练权限",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "coach/coursePlan/coursePlan",
+          "style": {
+            "navigationBarTitleText": "查看课程训练计划",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "entranceAuthorize/entranceAuthorize",
+          "style": {
+            "navigationBarTitleText": "店长门禁授权",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "addEntranceAuthorize/addEntranceAuthorize",
+          "style": {
+            "navigationBarTitleText": "编辑和新增门禁授权",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "nfcBinding/nfcBinding",
+          "style": {
+            "navigationBarTitleText": "NFC绑定管理",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "userRadioList/userRadioList",
+          "style": {
+            "navigationBarTitleText": "用户单选列表",
+            "enablePullDownRefresh": false,
+            "navigationStyle": "custom"
+          }
+        },
+        {
+          "path": "userExerciseList/userExerciseList",
+          "style": {
+            "navigationBarTitleText": "用户运动列表",
+            "enablePullDownRefresh": false,
+            "navigationBarBackgroundColor": "#fff"
+          }
+        }
+      ]
+    }
+  ],
+  // "plugins": {
+  //   "hello-plugin": {
+  //     "version": "1.0.4",
+  //     "provider": "wxa5c98a4c5d84de12"
+  //   }
+  // },
+  "sitemapLocation": "sitemap.json",
+  // 组件自动导入
+  // "easycom": {
+  // 	"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+  // },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "color": "#282828",
+    "selectedColor": "#e93323",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/store/index/index",
+        "iconPath": "static/tabbar/store.png",
+        "selectedIconPath": "static/tabbar/storeSelected.png",
+        "text": "我的首页"
+      },
+      // {
+      //   "pagePath": "pages/livingAtHomeTraining/index/index",
+      //   "iconPath": "static/tabbar/home.png",
+      //   "selectedIconPath": "static/tabbar/selectHome.png",
+      //   "text": "居家训练"
+      // },
+      //购物商城模块
+      // {
+      // 	"pagePath": "pages/shop/index/index",
+      // 	"iconPath": "static/tabbar/shop.png",
+      // 	"selectedIconPath": "static/tabbar/shopSelected.png",
+      // 	"text": "购物商城"
+      // // },
+      // {
+      //   "pagePath": "pages/punchTheClock/index/index",
+      //   "iconPath": "static/tabbar/clockIn.png",
+      //   "selectedIconPath": "static/tabbar/clockInSelected.png",
+      //   "text": "我要打卡"
+      // },
+      {
+        "pagePath": "pages/myCenter/index/index",
+        "iconPath": "static/tabbar/my.png",
+        "selectedIconPath": "static/tabbar/mySelected.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  }
+}

@@ -1,0 +1,42 @@
+    ResultSendSuseed,      // 发送成功
+    ResultAck,             // 回复命令
+    ResultPower,           // 电量
+    ResultFirmVersion,     // 固件版本
+    ResultHardVersion,     // 硬件版本
+    ResultSoftVersion,     // 软件版本
+    ResultFindPhone,       // 查找手机
+    ResultTakePhoto,       // 照相
+    ResultMusicStatus,     // 音乐控制
+    ResultLastSyncTime,    // 最后同步时间
+    ResultDeviceVersion,   // 硬件版本号
+    ResultRealTimeHR,      // 实时心率
+    ResultRealTimeSteps,   // 实时步数
+    ResultRTStepFrequency, // 实时步频
+    ResultRTTem,           // 实时温度
+    ResultRTSPO2,          // 实时血氧
+    ResultHRVData,         // HRV数据
+    ResultRTFistInfo,      // 实时拳击数据
+    ResultRTWeight,        // 实时秤数据
+    ResultRecordData,      // 大数据
+    ResultFitList,         // fit文件列表
+    ResultFitData,         // fit文件数据
+    ResultSyncing,         // 同步大数据中...
+    ResultHubLoginStatus,  // hub 登录状态
+    ResultHubLoginPw,      // hub 登录密码
+    ResultlHubWifiWorkMode,// hub wifi工作模式
+    ResultHubWifiSTA,      // hub wifi STA 信息
+    ResultHubWifiSocket,   // hub wifi Socket 信息
+    ResultHubNetWorkMode,  // hub 内外网模式
+    ResultHubRemark,       // hub 备注信息
+    ResultHubIpKey,        // hub IP Key
+    ResultHubWifiList,     // hub wifi 列表
+    ResultHubWifiStatus,   // hub wifi 状态
+    ResultHub4GAPN,        // 上传4G APN信息
+    ResultHubSystemStatus, // 上传系统状态
+    ResultSetShock,        // 设置震动阈值
+    ResultGetShock,        // 获取震动阈值
+    ResultCloseShock,      // 关闭震动功能
+    ResultMaxInterval,     // 设置心率区间最大值
+    ResultLightSwitch,     // 设置呼吸灯的开关
+    ResultMacAddress,      // MAC地址
+    ResultAllVersion,      // 全部的版本号

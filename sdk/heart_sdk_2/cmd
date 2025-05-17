@@ -1,0 +1,35 @@
+    0:  ArmBandCmdSetTime            // 臂带时间
+    1:  ArmBandCmdOpenRealTImeSteps, // 开启实时数据
+    2:  ArmBandCmdEnterHRVMode,      // 进入HRV模式
+    3:  ArmBandCmdEnterSPO2Mode,     // 进入SPO2模式
+    4:  ArmBandCmdEnterTemMode,      // 进入温度模式
+    5:  ArmBandCmdSetHrvTime,        // 设置HRV时间
+    6:  ArmBandCmdGetDeviceSupport,  // 获取设备支持信息
+    7:  ArmBandCmdGetTotalRecord,    // 获取所有历史数据
+    8:  ArmBandCmdGetStepRecord,     // 获取运动历史数据
+    9:  ArmBandCmdGetHRRecord,       // 获取心率历史数据
+    10:  ArmBandCmdSetShock,          // 设置震动阈值
+    11:  ArmBandCmdGetShock,          // 获取震动阈值
+    12:  ArmBandCmdCloseShock,        // 关闭震动功能
+    13:  ArmBandCmdMaxInterval,       // 设置心率区间最大值
+    14:  ArmBandCmdLightSwitch,       // 设置呼吸灯的开关
+    15:  ArmBandCmdGetMacAddress,     // 获取Mac地址
+    16:  ArmBandCmdGetVersion,        // 获取设备版本号
+    17:   ArmBandCmdEnterOTA,          // 进入OTA模式
+
+    返回数据解析：一个包包含20个字节（byte）,一个字节包含8 bit
+    第一个字节为固定值：0XFF
+    第二个字节为标识符：第0-3bit传输层包序号（0-F），多包使用，单包为0
+        4：保留
+        5：是否需要应答，0：否，1是
+        6：继续包：0， 结束包：1
+        7：单包：0， 多包：1
+    第三个字节：0-5bit是包长度，6-7保留
+    第4-19字节为数据，payload，
+    其中第4、5字节为命令序号，用于回复接收到命令使用
+    第6个字节为命令标识，数据的处理类型
+    第7个字节：keyMark
+    第8个字节：ackType：应答标识
+    第9个字节：valueLong :数据长度
+    剩余7个字节为真正的数据
+    第20个字节：checkSum

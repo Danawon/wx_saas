@@ -1,0 +1,134 @@
+view {
+	box-sizing: border-box;
+	font-family: PingFang SC-Regular, PingFang SC;
+}
+.wrap-min {
+	min-height: 100vh;
+	background-color: #f5f5f5;
+	opacity: 1;
+}
+.text-elpis {
+	overflow: hidden;
+
+	text-overflow: ellipsis;
+
+	white-space: nowrap;
+	width: 100%;
+}
+.text-elpis2 {
+	overflow: hidden;
+
+	text-overflow: ellipsis;
+
+	display: -webkit-box;
+
+	-webkit-line-clamp: 2;
+
+	-webkit-box-orient: vertical;
+	width: 100%;
+}
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.flex-a {
+	display: flex;
+	align-items: center;
+}
+.ju-bt {
+	justify-content: space-between;
+}
+.ju-ar {
+	justify-content: space-around;
+}
+.flex-j {
+	display: flex;
+	justify-content: center;
+}
+.flex-col {
+	display: flex;
+	flex-direction: column;
+}
+.flex-row {
+	display: flex;
+	flex-direction: row;
+}
+.flex-wrap {
+	flex-wrap: wrap;
+}
+@for $i from 10 through 750 {
+  .w-#{$i} {
+	width: $i + rpx!important;
+  }
+  .h-#{$i}{
+	height: $i + rpx!important;
+  }
+  .wh-#{$i}{
+	width: $i + rpx!important;
+	height: $i + rpx!important;
+  }
+}
+.f-bold {
+	font-weight: bold;
+} 
+@for $i from 5 through 60 {
+.pad#{$i} {
+	padding: $i + rpx;
+}
+.pad-r#{$i} {
+	padding-right: $i + rpx;
+}
+.pad-l#{$i} {
+	padding-left: $i + rpx;
+}
+.pad-t#{$i} {
+	padding-top: $i + rpx;
+}
+.pad-b#{$i} {
+	padding-bottom: $i + rpx;
+}
+.padtb#{$i} {
+	padding-top: $i + rpx;
+	padding-bottom: $i + rpx;
+}
+.padlr#{$i} {
+	padding-left: $i + rpx;
+	padding-right: $i + rpx;
+}
+
+
+.mar#{$i} {
+	margin: $i + rpx;
+}
+.mar-r#{$i} {
+	margin-right: $i + rpx;
+}
+.mar-l#{$i} {
+	margin-left: $i + rpx;
+}
+.mar-t#{$i} {
+	margin-top: $i + rpx
+}
+.mar-b#{$i} {
+	margin-bottom: $i + rpx;
+}
+.martb#{$i} {
+	margin-top: $i + rpx;
+	margin-bottom: $i + rpx;
+}
+.marlr#{$i} {
+	margin-left: $i + rpx;
+	margin-right: $i + rpx;
+}
+.font-#{$i} {
+	font-size: $i + rpx !important;
+}
+.round-#{$i} {
+	border-radius: $i + rpx;
+}
+}
+
+.w50 {
+	width: 50%;
+}
