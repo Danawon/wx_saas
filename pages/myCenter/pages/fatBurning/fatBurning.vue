@@ -17,7 +17,7 @@
         <view class="tit-txt">历史记录</view>
       </view>
 
-      <view class="list-box mar-t40">
+      <!-- <view class="list-box mar-t40">
         <view
           class="li pad20 mar-b40"
           v-for="(item, index) in list"
@@ -112,9 +112,9 @@
             </view>
           </view>
         </view>
-      </view>
+      </view> -->
 
-      <u-empty v-if="!list.length" mode="list" text="暂无历史数据..."></u-empty>
+      <u-empty mode="list" text="暂无历史数据..."></u-empty>
     </view>
   </view>
 </template>

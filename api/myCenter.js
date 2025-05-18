@@ -66,9 +66,8 @@ export const getQuestionnaireRecordList = data => {
 /* 心率强度列表 */
 export const getIntensityList = () => {
 	return req({
-		url: "equipment/getStrength", 
+		url: "getStrength", 
 		method: "get",
-		
 	})
 }
 /* 生成燃烧卡卡路里记录 */

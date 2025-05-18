@@ -102,10 +102,10 @@
           </view>
 
           <view class="other-item">
-            <view class="tit">血氧饱和度</view>
+            <view class="tit">实时血糖</view>
             <view class="val-box flex-row flex-a">
               <view class="vale">--</view>
-              <view class="unit">%</view>
+              <view class="unit">mmol/L</view>
             </view>
           </view>
         </view>
@@ -777,7 +777,7 @@ export default {
 			 */
       this.fromType = paremtType;
       getIntensityList().then((res) => {
-        this.strengthArr = res.data.strength;
+        this.strengthArr = res.data;
         this.strengthArr.map((item, index) => {
           item.color = index;
         });
@@ -1193,7 +1193,11 @@ export default {
       }
       uni.scanCode({
         success: (res) => {
-          this.connectType = res.result.split("#")[0].split("=")[1];
+					this.connectType = res.result.split("#")[0]
+					if(this.connectType.includes("=")) {
+						this.connectType = this.connectType.split("=")[1];
+					}
+					
           /* 重置客户端id */
           this.client_id = "";
           /* 投屏房间id */
@@ -1392,7 +1396,7 @@ export default {
       /* ws服务链接成功 */
       this.wsConnectState = true;
       let tcpDData = JSON.parse(e);
-      if (tcpDData.type == "heart_lung") {
+      if (tcpDData.event == "heartLung") {
         this.socketData = tcpDData;
       }
       // this.socketData = JSON.parse(e);
