@@ -130,9 +130,8 @@ export const getLockerListUser = data => {
 /* 删除我的设备 */
 export const delDevice = data => {
 	return req({
-		url: "heart_rate_meter/delete", 
-		method: "DELETE",
-		data
+		url: "heart_rate_meter/delete?sign=" + data, 
+		method: "DELETE"
 	})
 }
 /* 修改链接心率带名称 */
@@ -147,7 +146,7 @@ export const editDeviceName = data => {
 export const  getDeviceRecord = () => {
 	return req({
 		url: "heart_rate_meter/index", 
-		method: "get",
+		method: "get"
 	})
 }
 /* 添加链接记录 */

@@ -45,7 +45,7 @@
 						:index="index"
 						:key="index"
 						@click="onActionItem"
-						:name="item.id"
+						:name="item.sign"
 					>
 						<view
 							class="li martb20 flex-row flex-a ju-bt "
@@ -53,7 +53,7 @@
 							<view class="li-l flex-row flex-a">
 								<view class="lable">设备名称：</view>
 								<view class="lable-val">
-									{{ item.name || item.device_id }}
+									{{ item.name || item.deviceId }}
 									<text class="tips">
 										（向左滑动编辑）
 									</text>
@@ -374,7 +374,7 @@ export default {
 									(resItem, resIndex) => {
 										if (
 											deItem.name ==
-											resItem.device_id
+											resItem.deviceId
 										) {
 											deItem.deviceName =
 												resItem.name;
@@ -395,11 +395,11 @@ export default {
 			if (type == 'success') {
 				/* 添加设备链接记录 */
 				addDeviceRecord({
-					device_id: e.device ? e.device.name : e.name
+					deviceId: e.device ? e.device.name : e.name
 				}).then(res => {
 					uni.setStorageSync(
 						'selectedScanDevice',
-						res.data.type
+						res.data.deviceType
 					);
 					uni.setStorageSync("armletInfo", JSON.stringify(e.device ? e.device : e))
 					this.connectName = e.device ? e.device.name : e.name;
@@ -426,9 +426,7 @@ export default {
 		/* 选中操作 */
 		onActionItem(e) {
 			if (e.index) {
-				delDevice({
-					id: e.name
-				}).then(res => {
+				delDevice(e.name).then(res => {
 					uni.showToast({
 						title: res.msg
 					});
@@ -451,7 +449,7 @@ export default {
 				return;
 			}
 			editDeviceName({
-				id: this.selectDeviceId,
+				sign: this.selectDeviceId,
 				name: this.nickname
 			}).then(res => {
 				uni.showToast({
@@ -471,7 +469,7 @@ export default {
 			getDeviceRecord().then(res => {
 				this.list = res.data;
 				this.list.forEach(item => {
-					if(item.device_id == this.connectName) {
+					if(item.deviceId == this.connectName) {
 						item.is_connect = true
 					}
 				})

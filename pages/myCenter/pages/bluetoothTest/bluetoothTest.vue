@@ -1183,7 +1183,10 @@ export default {
       /* 扫码 */
       uni.scanCode({
         success: (res) => {
-          let resultType = res.result.split("#")[0].split("=")[1];
+          let resultType = res.result.split("#")[0];
+					if (resultType.includes("=")) {
+						resultType = resultType.split("=")[1]
+					}
           if (this.currentTabs == 1 && resultType != "treadmill") {
             uni.showModal({
               title: "您当前所在是跑步机测试，请扫描跑步机设备二维码哦~",
@@ -1207,7 +1210,7 @@ export default {
           // }
 
           // 设备id
-          this.device_id = res.result.split("=")[1];
+          this.device_id = res.result.includes("=") ? res.result.split("=")[1] : res.result;
           uni.setStorageSync("deviceId", this.device_id);
           // 设备id 和 客户id存在 加入分组
           // this.client_id &&
@@ -1742,7 +1745,7 @@ export default {
     // 椭圆机加入分组 跑步机
     ellipticalsIndexFun() {
       ellipticalsIndex({
-        device_id: this.device_id,
+        deviceId: this.device_id,
         client_id: this.client_id,
       })
         .then((res) => {
