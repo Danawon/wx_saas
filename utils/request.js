@@ -30,21 +30,22 @@ const req = obj => {
 				uni.hideLoading()
 				if (res.data.code >= 200 && res.data.code < 300) {
 					resolve(res.data)
-				} else if (res.data.code == 401||res.data.code == 403) {
+				} else {
 					uni.showToast({
 						icon: "none",
 						title: res.data.msg,
 						duration: 2000,
 					})
-					uni.removeStorageSync('token')
-					 setTimeout(() => {
-						uni.navigateTo({
-							url: "/pages/login/login"
-						})
-					 }, 1500)
+					if (res.data.code == 401||res.data.code == 403) {
+						uni.removeStorageSync('token')
+						setTimeout(() => {
+							uni.navigateTo({
+								url: "/pages/login/login"
+							})
+						}, 1500)
+					}
 					reject(res.data)
 				}
-					
 			}),
 			fail: ((err) => {
 				uni.hideLoading()

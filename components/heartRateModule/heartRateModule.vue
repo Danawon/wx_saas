@@ -793,23 +793,23 @@ export default {
     /* 生成卡路里记录 */
     motionAddFun() {
       motionAdd({
-        equipment_id: this.device_id,
+        deviceId: this.device_id,
         speed: this.deviceData.exerciseSpeed,
-        length_time: this.tiemDurationDate,
+        lengthTime: this.tiemDurationDate,
         distance: this.deviceData.totalDistance,
         calories: this.deviceData.calories,
-        heart_rate: this.HRmean,
-        avg_heart_rate_arr: this.HRmeanArr.join(","),
-        length_time_second: this.tiemDuration,
+        heartRate: this.HRmean,
+        avgHeartRateArr: this.HRmeanArr.join(","),
+        lengthTimeSecond: this.tiemDuration,
         strength: this.strengthArr[this.strengIndex].value,
-        burn_fat: parseInt(this.deviceData.calories / 7.7), // 燃烧脂肪
-        strength_statistics: JSON.stringify(this.strength_statistics), // 强度统计
-        aerobic_heart_rate_arr: this.heartRateArr.length
+        burnFat: parseInt(this.deviceData.calories / 7.7), // 燃烧脂肪
+        strengthStatistics: JSON.stringify(this.strength_statistics), // 强度统计
+        aerobicHeartRateArr: this.heartRateArr.length
           ? this.heartRateArr.join(",")
           : "", // 心率数组列表
         steps: this.stepInfo.toatalStep, // 心率带步数
         noConnectionCalories: this.noConnectionCalories, // 未连接心率带 计算的热量
-        device_system: uni.getSystemInfoSync().osName,
+        deviceSystem: uni.getSystemInfoSync().osName,
       }).then((res) => {
         uni.showToast({
           title: res.msg,
@@ -838,22 +838,23 @@ export default {
     setStorageExerciseData() {
       /* 记录当前页面数据 */
       let exerciseData = {
-        equipment_id: this.device_id,
+        deviceId: this.device_id,
         speed: this.deviceData.exerciseSpeed,
-        length_time: this.tiemDurationDate,
+        lengthTime: this.tiemDurationDate,
         distance: this.deviceData.totalDistance,
         calories: this.deviceData.calories,
-        heart_rate: this.HRmean,
-        avg_heart_rate_arr: this.HRmeanArr.join(","),
-        length_time_second: this.tiemDuration,
+        heartRate: this.HRmean,
+        avgHeartRateArr: this.HRmeanArr.join(","),
+        lengthTimeSecond: this.tiemDuration,
         strength: this.strengthArr[this.strengIndex].value,
-        burn_fat: parseInt(this.deviceData.calories / 7.7), // 燃烧脂肪
-        strength_statistics: JSON.stringify(this.strength_statistics), // 强度统计
-        aerobic_heart_rate_arr: this.heartRateArr.length
+        burnFat: parseInt(this.deviceData.calories / 7.7), // 燃烧脂肪
+        strengthStatistics: JSON.stringify(this.strength_statistics), // 强度统计
+        aerobicHeartRateArr: this.heartRateArr.length
           ? this.heartRateArr.join(",")
           : "", // 心率数组列表
         steps: this.stepInfo.toatalStep, // 心率带步数
         noConnectionCalories: this.noConnectionCalories, // 未连接心率带 计算的热量
+				deviceSystem: uni.getSystemInfoSync().osName
       };
       uni.setStorageSync("errRecordData", JSON.stringify(exerciseData));
     },
@@ -1192,68 +1193,28 @@ export default {
         return;
       }
       uni.scanCode({
-        success: (res) => {
+				success: (res) => {
 					this.connectType = res.result.split("#")[0]
 					if(this.connectType.includes("=")) {
 						this.connectType = this.connectType.split("=")[1];
 					}
-					
-          /* 重置客户端id */
-          this.client_id = "";
-          /* 投屏房间id */
-          if (
-            this.connectType == "treadmill" ||
-            this.connectType == "ellipticals"
-          ) {
-            // 设备id
-            this.device_id = res.result.split("=")[1];
-            uni.setStorageSync("deviceId", this.device_id);
-            if (this.deviceState) {
-              uni.showToast({
-                title: "已连接设备！",
-                icon: "error",
-                duration: 2000,
-              });
-              return;
-            }
-            /* wsConnectState -> socket 是否已经链接 */
-            if (this.wsConnectState == true) {
-              /* 当前sock 处于链接状态 已拿到客户端id 调用加入分组 */
-              this.ellipticalsIndexFun();
-            } else {
-              /* 请求链接socket */
-              this.connectSocket();
-            }
-          } else if (this.connectType == "HeartRateSystem") {
-            this.roomId = res.result.split("#")[1];
-            if (!this.bluetooth) {
-              /* 判断是否链接心率带 */
-              this.$refs.uToast.show({
-                type: "none",
-                message: "请连接心率带后再扫描！",
-              });
-              return;
-            }
-            /* 是否已加入投屏分组 正在投屏 */
-            if (this.joinScreenGroupStatus) {
-              this.$refs.uToast.show({
-                type: "none",
-                message: "当前正在投屏，请勿重复扫描！",
-              });
-              return;
-            }
-            /* wsConnectState -> socket 是否已经链接 */
-            if (this.wsConnectState == true) {
-              /* 当前sock 处于链接状态 已拿到客户端id 直接调用加入投屏分组 */
-              this.joinScreenGroupFun();
-            } else {
-              /* 请求链接socket */
-              this.connectSocket();
-            }
-            this.deviceState = true;
-          }
-        },
-      });
+					console.log(res.result, "---扫码结果");
+					// 设备id
+					this.device_id = res.result;
+					uni.setStorageSync("deviceId", this.device_id);
+					if (this.deviceState) {
+						uni.showToast({
+							title: "已连接设备！",
+							icon: "error",
+							duration: 2000,
+						});
+						return;
+					}
+					console.log("wsConnectState:", this.wsConnectState);
+					//连接设备
+					this.ellipticalsIndexFun();
+				}
+			});
     },
     /* 链接socket */
     connectSocket() {
@@ -1462,13 +1423,12 @@ export default {
     },
     /* socket服务 设备加入分组 */
     ellipticalsIndexFun() {
-      ellipticalsIndex({
-        device_id: this.device_id,
-        client_id: this.client_id,
-      }).then((res) => {
-        this.deviceState = true; // 加入分组代表链接设备成功
-      });
-    },
+			ellipticalsIndex({
+				deviceId: this.device_id,
+			}).then((res) => {
+				this.deviceState = true; // 加入分组代表链接设备成功
+			});
+		},
 
     // 链接设备
     _connect(item) {

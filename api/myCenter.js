@@ -73,7 +73,7 @@ export const getIntensityList = () => {
 /* 生成燃烧卡卡路里记录 */
 export const motionAdd = data => {
 	return req({
-		url: "motion_add", 
+		url: "sports/motion_add", 
 		method: "post",
 		data
 	})
